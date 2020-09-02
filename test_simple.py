@@ -14,6 +14,7 @@ import numpy as np
 import PIL.Image as pil
 import matplotlib as mpl
 import matplotlib.cm as cm
+import cv2
 
 import torch
 from torchvision import transforms, datasets
@@ -146,8 +147,14 @@ def test_simple(args):
 
             print("   Processed {:d} of {:d} images - saved prediction to {}".format(
                 idx + 1, len(paths), name_dest_im))
+            
+            img = cv2.imread(name_dest_im)
+            cv2.imshow('img', img)
+            cv2.waitKey(0)
+            #cv2.destroyAllWindows()
 
     print('-> Done!')
+ 
 
 
 if __name__ == '__main__':
