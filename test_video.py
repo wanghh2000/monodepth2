@@ -105,7 +105,7 @@ def video_demo(video_path, model_name):
                               :, :, :3] * 255).astype(np.uint8)
 
             cv2.imshow('img', colormapped_im)
-            cv2.waitKey(30)
+            cv2.waitKey(10)
             key = cv2.waitKey(1) & 0xFF
             if key == ord('q'):
                 break
@@ -213,5 +213,5 @@ if __name__ == "__main__":
     imagefile = 'C:/20.jpg'
     videofile = 'C:/001.mp4'
     #image_demo(imagefile, model_name)
-    #video_demo(videofile, model_name)
-    play_demo(videofile, model_name)
+    video_demo(videofile, model_name)
+    #play_demo(videofile, model_name)
