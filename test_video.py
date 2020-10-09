@@ -212,6 +212,6 @@ if __name__ == "__main__":
     model_name = 'mono+stereo_640x192'
     imagefile = 'C:/20.jpg'
     videofile = 'C:/001.mp4'
-    #image_demo(imagefile, model_name)
-    video_demo(videofile, model_name)
+    image_demo(imagefile, model_name)
+    #video_demo(videofile, model_name)
     #play_demo(videofile, model_name)
